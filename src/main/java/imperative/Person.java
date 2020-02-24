@@ -36,4 +36,12 @@ public class Person {
         result = 31 * result + (gender != null ? gender.hashCode() : 0);
         return result;
     }
+
+    @Override
+    public String toString() {
+        return "Person{" +
+                "name='" + name + '\'' +
+                ", gender=" + gender +
+                '}';
+    }
 }
