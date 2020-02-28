@@ -1,21 +1,30 @@
 package functionalintreface;
 
+import java.util.function.BiConsumer;
 import java.util.function.Consumer;
 
 public class _Consumer {
     public static void main(String[] args) {
+
         // Java normal
-        getConsumer(new Costumer("Roman", "8989"));
+        Costumer roman = new Costumer("Roman", "8989");
+        getConsumer(roman);
 
         // Java function
-        costumerConsumer.accept(new Costumer("Roman", "8989"));
+        costumerConsumer.accept(roman);
+        costumerConsumerV2.accept(roman, false);
+
     }
 
-        // Java function
-    static Consumer<Costumer> costumerConsumer = costumer ->
+    // Java function
+    private static Consumer<Costumer> costumerConsumer = costumer ->
             System.out.println("Hello " + costumer.name + " thanks regist you number " + costumer.numberPhone);
 
-       // Java normal
+    private static BiConsumer<Costumer, Boolean> costumerConsumerV2 = (costumer, showPassword) ->
+            System.out.println("Hello " + costumer.name + " thanks regist you number " +
+                    (showPassword ? costumer.numberPhone : "********"));
+
+    // Java normal
     public static void getConsumer(Costumer consumer) {
         System.out.println("Hello " + consumer.name + " thanks regist you number " + consumer.numberPhone);
     }
