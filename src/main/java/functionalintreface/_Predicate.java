@@ -4,10 +4,11 @@ import java.util.function.Predicate;
 
 public class _Predicate {
     public static void main(String[] args) {
-      /*  System.out.println(getPhoneValid("03855"));
+  System.out.println(getPhoneValid("03855"));
         System.out.println(getPhoneValid("04800"));
         System.out.println(numberPhone.test("03855"));
-        System.out.println(numberPhone.test("03755"));*/
+        System.out.println(numberPhone.test("03755"));
+
 
         System.out.println("Is phone contain number 7 \n"+numberPhone.and(contains7).test("03835"));
         System.out.println("Is phone contain number 7 \n"+numberPhone.or(contains7).test("07857"));

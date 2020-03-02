@@ -1,5 +1,6 @@
 package functionalintreface;
 
+import java.util.Arrays;
 import java.util.List;
 
 public class _Supllier {
@@ -13,6 +14,6 @@ public class _Supllier {
     }
 
     private static List<String> getJdbcIrls(){
-        return List.of("jdbc:localhost//54321", "jdbc:localhost//costumer");
+        return Arrays.asList("jdbc:localhost//54321", "jdbc:localhost//costumer");
     }
 }

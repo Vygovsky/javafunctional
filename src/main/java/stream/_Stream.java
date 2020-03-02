@@ -1,16 +1,17 @@
 package stream;
 
-import imperative.Gender;
 import imperative.Person;
 
+import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 
-import static imperative.Gender.*;
+import static imperative.Gender.FEMALE;
+import static imperative.Gender.MALE;
 
 public class _Stream {
     public static void main(String[] args) {
-        List<Person> personList = List.of(
+        List<Person> personList = Arrays.asList(
                 new Person("Jone", MALE),
                 new Person("Marina", FEMALE),
                 new Person("Aisha", FEMALE),
